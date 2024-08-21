@@ -18,7 +18,7 @@ species.to.convert<-"drerio"   ##Type in the orthologous species name, For e.g d
 ##########################################################################################################################
 
 data<- read.xlsx(file=filename, sheetName =sheetname )#Reading in the excel sheet with different list of genes in different columns
-converted.data<-matrix(nrow = length(row.names(data)), ncol = length(colnames(data)), dimnames = list(NULL, colnames(data))) #creating matrix to store converted gene list
+converted.data<-matrix(nrow = 2*(length(row.names(data))), ncol = length(colnames(data)), dimnames = list(NULL, colnames(data))) #creating matrix to store converted gene list
 
 print(paste0("Potential Dataset that match the query for input species :", dataset_list[grep(input_species, dataset_list)]))
 selected.input.dataset<-dataset_list[grep(input_species, dataset_list)][1]
